@@ -1,17 +1,18 @@
-import './App.css'
-import Chart from './chart'
-import Page from './echart'
+import Section1 from './Section1'
+import Section2 from './Section2'
+import Section3 from './Section3'
+import Section4 from './Section4'
 
 function App() {
 
   return (
-    <div className='w-screen h-screen bg-red-700'>
-      <div className='bg-lime-400'>
-        <h1>This is the app component</h1>
-        </div>
-        <Chart />
-        <Page />
-    </div>
+    <>
+    <Section1 />
+    <Section2 />
+    <Section3 />
+    <Section4 />
+    </>
+    
   )
 }
 

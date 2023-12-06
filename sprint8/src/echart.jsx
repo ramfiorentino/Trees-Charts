@@ -1,8 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import ReactECharts from 'echarts-for-react';
 import 'echarts-gl';
 
-function Page() {
+function Echart() {
+  const [chartOption, setChartOption] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const array1Data = useSelector((state) => state.data.array1);
+
+
   useEffect(() => {
     // Load simplex-noise from CDN
     const script = document.createElement('script');
@@ -12,17 +18,15 @@ function Page() {
 
     script.onload = () => {
       // Adjust this data based on the percentage of trees by m2
-      const treePercentageData = [
-        { city: 'Oslo', percentage: 72 },
-        // Add more entries for other locations...
-      ];
+      const treePercentageData = array1Data;
 
-      const noise = new window.SimplexNoise();
-
-      const seriesData = treePercentageData.map(({ city, percentage }, index) => ({
-        name: city,
-        value: [index, 0, percentage],
-      }));
+      // Generate series data with 3 rows along the y-axis
+      const seriesData = treePercentageData.flatMap(({ city, percentage, coverKm2, totalKm2 }, index) => {
+        return Array.from({ length: 3 }, (_, yIndex) => ({
+          name: city,
+          value: [index, yIndex, yIndex === 0 ? percentage : yIndex === 1 ? coverKm2 : totalKm2],
+        }));
+      });
 
       const option = {
         xAxis3D: {
@@ -30,10 +34,12 @@ function Page() {
           data: treePercentageData.map(({ city }) => city),
         },
         yAxis3D: {
-          type: 'value',
+          type: 'category',
+          data: ['Tree cover %', 'Tree cover km²', 'City total km²'],
         },
         zAxis3D: {
           type: 'value',
+          max: 500, // Adjust the maximum value
         },
         grid3D: {
           viewControl: {
@@ -61,49 +67,16 @@ function Page() {
         ],
       };
 
-      // You can log the option to see how it looks like
-      console.log(option);
+      setChartOption(option);
+      setLoading(false);
     };
-  }, []); // Empty dependency array means this effect runs once after the initial render
+  }, []);
 
-  const option = {
-    xAxis3D: {
-      type: 'category',
-      data: ['Oslo'], // You can add more cities here
-    },
-    yAxis3D: {
-      type: 'value',
-    },
-    zAxis3D: {
-      type: 'value',
-    },
-    grid3D: {
-      viewControl: {
-        // autoRotate: true
-      },
-      light: {
-        main: {
-          shadow: true,
-          quality: 'ultra',
-          intensity: 1.5,
-        },
-      },
-    },
-    series: [
-      {
-        type: 'bar3D',
-        data: [{ name: 'Oslo', value: [0, 0, 72] }],
-        shading: 'lambert',
-        emphasis: {
-          label: {
-            show: false,
-          },
-        },
-      },
-    ],
-  };
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-  return <ReactECharts option={option} style={{ height: '400px' }} />;
-};
+  return <ReactECharts option={chartOption} style={{ width: '100%', height:'100%'}} />;
+}
 
-export default Page;
+export default Echart;

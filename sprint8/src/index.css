@@ -2,22 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-body {
+#root {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #ff00dd;
-  /*border-style: solid;
-  border-width: 3px;
-  border-color: blue;*/
+  width: 100vw;
+}
+
+html, body {
+  width: 100vw;
+  overflow-x: hidden;
+  color: #12834B;
 }
 
 * {
   scroll-behavior: smooth;
+  /* outline: 1px solid red; */
+}
+
+.recharts-legend-wrapper {
+  padding-right: 5rem;
+  padding-top: -5rem;
+  display: flex;
+  width: 100vh;
+  justify-content: center;
 }

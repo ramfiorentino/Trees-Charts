@@ -16,7 +16,7 @@ function Chart() {
   const array2Data = useSelector((state) => state.data.array2);
 
   return (
-    <div className="flex justify-center -mb-10 mt-5 mx-0">
+    <div className="flex pr-10 justify-center max-w-full mb-10">
     <BarChart
       width={500}
       height={300}
@@ -32,10 +32,10 @@ function Chart() {
       <XAxis dataKey="city" />
       <YAxis />
       <Tooltip />
-      <Legend />
-      <Bar dataKey="cityKm2" fill="#8884d8" />
-      <Bar dataKey="treeCoverKm" fill="#82ca9d" />
-      <Bar dataKey="treePercentage" fill="#ffcc00" />
+      <Legend className="pr-20"/>
+      <Bar dataKey="cityKm2" fill="#12834B" />
+      <Bar dataKey="treeCoverKm" fill="#7CA68E" />
+      <Bar dataKey="treePercentage" fill="#B3F2CF" />
     </BarChart>
     </div>
   );

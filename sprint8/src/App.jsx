@@ -6,12 +6,12 @@ import Section4 from './Section4'
 function App() {
 
   return (
-    <>
+    <div className='font-custom'>
     <Section1 />
     <Section2 />
     <Section3 />
     <Section4 />
-    </>
+    </div>
     
   )
 }

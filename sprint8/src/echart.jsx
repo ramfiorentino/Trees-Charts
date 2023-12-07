@@ -76,7 +76,7 @@ function Echart() {
     return <div>Loading...</div>;
   }
 
-  return <ReactECharts option={chartOption} style={{ width: '100%', height:'100%'}} />;
+  return <ReactECharts option={chartOption} style={{ width: '100%', height:'100%'}} className='max-w-full' />;
 }
 
 export default Echart;

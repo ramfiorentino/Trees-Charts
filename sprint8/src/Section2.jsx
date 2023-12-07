@@ -9,9 +9,9 @@ function Section2() {
   return (
     <>
 
-      <div className="border-2 border-cyan-600 h-screen ">
+      <div className="sm:h-screen flex flex-col flex-wrap">
         
-      <div className="border-2 border-lime-500 text-center h-1/2" >
+      <div className="p-10 text-2xl leading-relaxed h-1/2" >
         <h3> The 5 cities with higher percentage of tree coverage are  
           {array1Data[0].city} ({array1Data[0].percentage}%),  
           {array1Data[1].city} ({array1Data[1].percentage}%),   
@@ -20,8 +20,8 @@ function Section2() {
           {array1Data[4].city} ({array1Data[0].percentage}%)</h3>
       </div>
 
-      <div className="flex border-2 border-lime-500 h-1/2 justify-center items-center" >
-        <div className="flex justify-center items-center border-2 border-blue-500 m-10 h-64 w-64">
+      <div className="flex  h-1/2 justify-center items-center" >
+        <div className="flex justify-center items-center m-10 h-64 w-64 max-w-full">
         <Echart />
         </div>
       </div>

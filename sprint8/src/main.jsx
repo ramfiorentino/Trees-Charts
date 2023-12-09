@@ -4,6 +4,8 @@ import App from './App.jsx'
 import './index.css'
 import { store } from "./redux/store.js"
 import { Provider  } from 'react-redux'
+import i18n from './i18n'; // Import the initialized i18n instance
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

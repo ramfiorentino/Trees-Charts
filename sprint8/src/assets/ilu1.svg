@@ -1,18 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 325 100"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="ssspill-grad"><stop stop-color="hsl(150, 73%, 48%)" stop-opacity="1" offset="45%"></stop><stop stop-color="hsl(270, 73%, 53%)" stop-opacity="1" offset="100%"></stop></linearGradient></defs><rect width="100%" height="100%" fill="hsl(0, 0%, 0%)"></rect><g fill="url(#ssspill-grad)">
-    <rect width="100%" height="40" fill="hsl(150, 73%, 48%)"></rect>
-
-    <rect x="0" width="7.69%" height="95.92981669419066" rx="15"></rect>
-      <rect x="50" width="7.69%" height="62.32183429014185" rx="15"></rect>
-      <rect x="100" width="7.69%" height="65.84235082997411" rx="15"></rect>
-      <rect x="150" width="7.69%" height="88.61807364938196" rx="15"></rect>
-      <rect x="200" width="7.69%" height="64.02640650757408" rx="15"></rect>
-      <rect x="250" width="7.69%" height="63.655147487839756" rx="15"></rect>
-      <rect x="300" width="7.69%" height="58.70615428623056" rx="15"></rect>
-  </g><g fill="hsl(0, 0%, 0%)">
-    <rect x="25" y="24.864461812536394" width="7.69%" height="60" rx="15"></rect>
-      <rect x="75" y="15.978759762041383" width="7.69%" height="60" rx="15"></rect>
-      <rect x="125" y="6.477657542238837" width="7.69%" height="60" rx="15"></rect>
-      <rect x="175" y="18.99873211347816" width="7.69%" height="60" rx="15"></rect>
-      <rect x="225" y="24.435615182012324" width="7.69%" height="60" rx="15"></rect>
-      <rect x="275" y="11.959100640083738" width="7.69%" height="60" rx="15"></rect>
-  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700"><defs><linearGradient gradientTransform="rotate(150, 0.5, 0.5)" x1="50%" y1="0%" x2="50%" y2="100%" id="ffflux-gradient"><stop stop-color="#0cb04d" stop-opacity="1" offset="0%"></stop><stop stop-color="#ffffff" stop-opacity="1" offset="100%"></stop></linearGradient><filter id="ffflux-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency="0.005 0.003" numOctaves="2" seed="2" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence>
+  <feGaussianBlur stdDeviation="20 0" x="0%" y="0%" width="100%" height="100%" in="turbulence" edgeMode="duplicate" result="blur"></feGaussianBlur>
+  <feBlend mode="color-dodge" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" in2="blur" result="blend"></feBlend>
+  
+</filter></defs><rect width="700" height="700" fill="url(#ffflux-gradient)" filter="url(#ffflux-filter)"></rect></svg>

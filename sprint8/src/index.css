@@ -12,7 +12,7 @@
 html, body {
   width: 100vw;
   overflow-x: hidden;
-  color: #12834B;
+  color: #0CB04D;
 }
 
 * {
@@ -22,8 +22,20 @@ html, body {
 
 .recharts-legend-wrapper {
   padding-right: 5rem;
-  padding-top: -5rem;
   display: flex;
-  width: 100vh;
   justify-content: center;
+}
+
+.c-outline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0CB04D;
+  color: white;
+  font-weight: bold
+}
+
+.centered-text-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

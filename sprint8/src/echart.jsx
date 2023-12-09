@@ -63,6 +63,9 @@ function Echart() {
                 show: false,
               },
             },
+            color: [
+              '#208744',
+            ]
           },
         ],
       };

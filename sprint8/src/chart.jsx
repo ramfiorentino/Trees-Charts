@@ -33,9 +33,9 @@ function Chart() {
       <YAxis />
       <Tooltip />
       <Legend className="pr-20"/>
-      <Bar dataKey="cityKm2" fill="#12834B" />
-      <Bar dataKey="treeCoverKm" fill="#7CA68E" />
-      <Bar dataKey="treePercentage" fill="#B3F2CF" />
+      <Bar dataKey="cityKm2" fill="#0DA643" />
+      <Bar dataKey="treeCoverKm" fill="#55D983" />
+      <Bar dataKey="treePercentage" fill="#93BFAB" />
     </BarChart>
     </div>
   );

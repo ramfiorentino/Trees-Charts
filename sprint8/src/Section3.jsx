@@ -14,7 +14,7 @@ function Section3() {
 
   return (
     <>
-      <div className="sm:h-screen flex flex-col p-10 sm:px-30 md:px-32">
+      <div className="sm:h-screen flex flex-col p-10 sm:px-30 lg:px-32">
 
         <div className="flex justify-center items-center h-1/5 mb-16 p-10 md:p-0">
           <h2 className="text-4xl">{t("section3-text")}</h2>

@@ -19,7 +19,7 @@ function Section2() {
 
   return (
     <>
-      <div className="sm:h-screen flex flex-col flex-wrap sm:px-30 md:px-32 sm:flex sm:flex-row items-center bg-green-500 text-gray-100">
+      <div className="sm:h-screen flex flex-col flex-wrap sm:px-30 lg:px-32 sm:flex sm:flex-row items-center">
         <div className="p-10 text-2xl leading-relaxed h-1/2 sm:basis-1/2">
           <h1 className="md:text-4xl md:mb-5">{t("section2-title")}</h1>
           <h3>

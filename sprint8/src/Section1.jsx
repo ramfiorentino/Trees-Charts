@@ -11,7 +11,7 @@ function Section1() {
 
   return (
     <>
-      <div className="flex flex-col sm:h-full sm:px-30 md:px-32">
+      <div className="flex flex-col sm:h-full sm:px-30 lg:px-32">
         <div id="Title" className="mt-10 items-center h-1/5">
           <div className="flex px-10 mb-10 justify-end">
             <button className="border border-green-500 rounded-lg px-1 mr-3" onClick={() => changeLanguage("en")}>English</button>

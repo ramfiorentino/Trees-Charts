@@ -9,18 +9,16 @@ function Section4() {
 
   return (
     <>
-      <div className="sm:h-screen flex flex-col">
+      <div className="sm:h-full flex flex-col text-center">
         
-      <div className="h-3/5 px-10 my-5 justify-center items-center sm:px-30 md:px-32">
-        <h2 className="text-4xl">{t("section4-text1")}</h2>
-        <p className="text-2xl my-5">{t("section4-text2")}</p>
+      <div className="h-3/5 px-10 justify-center bg-cover bg-center relative sm:px-30 md:px-32 sm:py-44"
+      style={{ backgroundImage: `url(${ilu1})` }} >
+      <h2 className="text-4xl sm:text-5xl my-10 mx-10 sm:mx-20">{t("section4-text1")}</h2>
+
+        <p className="text-2xl sm:text-3xl my-10">{t("section4-text2")}</p>
       </div>
 
-      <div className="flex flex-col bg-black">
-        <img src={ilu1} alt="SVG image"/>
-        </div>
-
-      </div>
+</div>
     </>
   );
 }

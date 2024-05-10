@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import heroimage from "./assets/tree-faces.jpeg"
 
 function Section1() {
   const { i18n, t } = useTranslation();
@@ -27,7 +28,7 @@ function Section1() {
         <div className="sm:flex sm:flex-row-reverse">
           <div className="flex flex-col h-2/5 m-0 sm:my-0 sm:basis-1/2 ">
             <img
-              src={"../src/assets/tree-faces.jpeg"}
+              src={heroimage}
               alt="green world ilustration"
               className="m-0"
             />
